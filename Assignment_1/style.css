@@ -32,7 +32,7 @@ body{
     display:grid;
     grid-template-columns: 1fr 2fr;
     gap:25px;
-    align-items:start;
+    align-items:stretch;   /* FIXED */
 }
 
 /* CARD STYLE */
@@ -43,6 +43,8 @@ body{
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
     transition:0.3s ease;
     backdrop-filter: blur(6px);
+
+    height:100%;   /* FIXED */
 }
 
 .card:hover{
@@ -131,6 +133,12 @@ button:active{
     background: linear-gradient(135deg,#5a6fe5,#6a3f99);
 }
 
+/* EVENTS CARD FIX */
+.events-card{
+    display:flex;
+    flex-direction:column;
+}
+
 /* EVENTS ACTIONS */
 .actions{
     display:flex;
@@ -149,7 +157,7 @@ button:active{
     background: linear-gradient(135deg,#5568e0,#5f3794);
 }
 
-/* EMPTY STATE */
+/* EMPTY STATE FIX */
 #empty{
     text-align:center;
     color:#64748b;
@@ -158,12 +166,17 @@ button:active{
     border-radius:14px;
     font-size:15px;
     background:rgba(255,255,255,0.6);
+
+    flex:1;   /* FIXED */
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 /* DOM CARD */
 .dom-card{
     margin-top:25px;
-     grid-column: 1 / -1;
+    grid-column: 1 / -1;
 }
 
 /* DOM BOX */
